@@ -16,12 +16,15 @@ $medium: 1.6875rem;
 $small: 1.125rem;
 
 //dimensions 
-body {
-	font-family: 'Source Sans Pro';
+html {
+	font-size: 16px;
 }
-
+body{
+	font-family: 'Source Sans Pro', sans-serif;
+}
 h1{
 	font-size: $large;
+	color: $main-font-color;
 }
 h2 {
 	font-size: $medium;
@@ -29,17 +32,21 @@ h2 {
 h3{
 	font-size: $small;
 }
-
+p{
+	font-size: $small;
+}
 .main-header{
 	background-image: url('../img/main-bg.jpg');
+	background-repeat: no-repeat;
 	background-position: center center;
+	background-size: cover;
 	min-height: 1000px;
+	padding: 50px 165px 0 165px;
 }
 .top-menu{
 	font-size: $small;
 	text-transform: uppercase;
 	color: $main-font-color;
-	padding: 50px 165px 0 165px;
 	min-height: 30px;
 	.top-menu-logo{
 		font-weight: 700;
@@ -64,14 +71,33 @@ h3{
 		li{
 			display: inline-block;
 			margin-right: 25px;
+			position: relative;
+			&:after{
+				transition: all 0.3s ease;
+			}
+			
 			a{
 				text-decoration: none;
 				color: $main-font-color;
 				font-weight: bold;
+				transition: all 0.3s;
+				position: relative;
+			}
+			&:hover{
+				&:after{
+					content:'';
+					position:absolute;
+					width: 100%;
+					height: 0;    
+					left:0;
+					bottom:0px; /*Change this to increase/decrease distance*/
+					border-bottom: 2px solid #000;
+				}
 			}
 		}
 	}
 }
+
 .top-menu-toggle-wrap{
 	display: none;
 	.top-menu-toggle{
@@ -128,8 +154,45 @@ h3{
 	visibility: visible;
 }
 
-
-
+.main-header-content{
+	text-align: right;
+	margin-top: 350px;
+	position: relative;
+	h1{
+		margin-bottom: 76px;
+		&:after{
+			content: "";
+			position: absolute;
+			width: 140px;
+			height: 4px;    
+			right:0;
+			top:25%;
+			background-color: $main-font-color;
+		}
+	}
+	p{
+		text-align: right;
+		line-height: 1.889;
+		padding-left: 498px;
+		margin-bottom: 62px;
+	}
+}
+.main-header-button{
+	text-decoration: none;
+	display: inline-block;
+	width: 268px;
+	height: 43px;
+	color: $main-font-color;
+	font-size: $small;
+	text-align: center;
+	border: 2px solid $main-font-color;
+	padding: 8px 20px;
+	&:hover{
+		text-decoration: none;
+		color: $main-font-color;
+		font-weight: bold;
+	}
+}
 
 
 
