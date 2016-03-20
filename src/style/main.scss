@@ -15,7 +15,7 @@ $large: 4.5rem;
 $medium: 1.6875rem;
 $small: 1.125rem;
 
-//dimensions 
+//default styles 
 html {
 	font-size: 16px;
 }
@@ -35,6 +35,8 @@ h3{
 p{
 	font-size: $small;
 }
+
+// header styles
 .main-header{
 	background-image: url('../img/main-bg.jpg');
 	background-repeat: no-repeat;
@@ -193,7 +195,72 @@ p{
 		font-weight: bold;
 	}
 }
+// section 'about' styles
 
+.about{
+	padding: 100px 165px;
+	text-align: center;
+	color: $main-font-color;
+	position: relative;
+	min-height: 490px;
+	h2{
+		margin-bottom: 65px;
+	}
+	&:before{
+		content: "";
+		position: absolute;
+		top: 110px;
+		left: 50%;
+		background-image: url("../img/broccoli.svg");
+		background-repeat: no-repeat;
+		width: 44px;
+		height: 44px;
+		transform: translate(-50%, -100%);
+	}
+}
 
+// section 'features' styles
+.features{
+	min-height: 370px;
+	background-color: $clients-bg-color;
+	padding: 144px 165px 112px 165px;
+	position: relative;
+	.features-item-1{
+		&:before{
+			content: "";
+			position: absolute;
+			left: 15px;
+			top: -34px;
+			width: 40px;
+			height: 40px;
+			background-image: url("../img/clock.svg");
+			background-repeat: no-repeat;
+		}
+	}
+	.features-item-2{
+		&:before{
+			content: "";
+			position: absolute;
+			left: 15px;
+			top: -34px;
+			width: 40px;
+			height: 40px;
+			background-image: url("../img/vector.svg");
+			background-repeat: no-repeat;
+			}
+		}
+		.features-item-3{
+			&:before{
+			content: "";
+			position: absolute;
+			left: 15px;
+			top: -34px;
+			width: 47px;
+			height: 40px;
+			background-image: url("../img/land_working.svg");
+			background-repeat: no-repeat;
+			}
+		}
+	}
 
 @import "media.scss";
