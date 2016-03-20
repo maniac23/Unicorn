@@ -25,9 +25,11 @@ body{
 h1{
 	font-size: $large;
 	color: $main-font-color;
+	font-weight: 700;
 }
 h2 {
 	font-size: $medium;
+	font-weight: 600;
 }
 h3{
 	font-size: $small;
@@ -75,7 +77,7 @@ p{
 			margin-right: 25px;
 			position: relative;
 			&:after{
-				transition: all 0.3s ease;
+				transition: all 0.5s ease-in;
 			}
 			
 			a{
@@ -262,5 +264,79 @@ p{
 			}
 		}
 	}
+
+	// "articles" section styles
+.articles{
+	padding: 111px 165px 143px 165px;
+	text-align: center;
+	height: 840px;
+	h2{
+		margin-bottom: 54px;
+		text-transform: capitalize;
+	}
+	p{
+		margin-bottom: 60px;
+	}
+}
+.articles-item{
+			background-color: $secondary-font-color;
+			min-height: 368px;
+			width: 31%;
+			margin-right: 35px;
+			margin-bottom: 70px;
+			padding: 20px 40px 45px 40px;
+			color: $alt-font-color;
+			position: relative;
+			h6{
+				font-size: 0.875rem;
+				font-weight: 400;
+				letter-spacing: 0.066rem;
+				line-height: 2.357;
+				text-align: left;
+				text-transform: uppercase;
+				margin: 15px 0;
+			}
+			p{
+				font-size: 1.5rem;
+				font-weight: 400;
+				letter-spacing: 0.112rem;
+				line-height: 1.375;
+				text-align: left;
+			}
+			&:last-child{
+				margin-right: 0;
+			}
+			&:before{
+				content: "";
+				position: absolute;
+				width: 76px;
+				height: 7px;
+				background-color: $underline-color;
+				top: 0;
+				left: 35%;
+				opacity: 0;
+				transition: all 0.5s ease-in;
+			}
+}
+.articles-item:hover{
+	&:before{
+		opacity: 1;
+	}
+}
+.icon-wrap{
+	display: table;
+	img{
+		border-radius: 50%;
+		vertical-align: middle;
+		display: table-cell;
+		margin-right: 15px;
+	}
+	.icon-wrap-text{
+		vertical-align: middle;
+		display: table-cell;
+		text-align: left;
+	}
+} 
+
 
 @import "media.scss";
