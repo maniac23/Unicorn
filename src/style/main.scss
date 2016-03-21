@@ -269,7 +269,7 @@ p{
 .articles{
 	padding: 111px 165px 143px 165px;
 	text-align: center;
-	height: 840px;
+	min-height: 840px;
 	h2{
 		margin-bottom: 54px;
 		text-transform: capitalize;
@@ -337,6 +337,40 @@ p{
 		text-align: left;
 	}
 } 
+
+//clients section styles
+.clients{
+	height: 367px;
+	text-align: center;
+	background-color: $clients-bg-color;
+	padding: 45px 165px 100px;
+	h2{
+		margin-bottom: 40px;
+	}
+}
+.owl-carousel{
+	margin-bottom: 40px;
+}
+
+.owl-dots {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    .owl-dot{
+    	width: 14px;
+    	height: 14px;
+    	display: inline-block;
+    	margin: 0 4px;
+    	border-radius: 50%;
+    	border: 1px solid $main-font-color;
+    	background-color: #fff;
+    	opacity: .5;
+    	&.active{
+    		background-color: $main-font-color;
+    	}
+    }
+}
+
 
 
 @import "media.scss";

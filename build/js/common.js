@@ -6,6 +6,30 @@ $(document).ready(function() {
 		return false;
 	});
 
+	// owl carousel
+	$('.owl-carousel').owlCarousel({
+    loop:true,
+    nav: false,
+    margin:60,
+    dots: true,
+    animateIn: true,
+    animateOut: true,
+    items: 3,
+    center: true,
+    autoWidth: true,
+    responsiveClass:true,
+    responsive:{
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:3,
+     
+        }
+      }
+});
+
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
 	$(".forms").submit(function() {
