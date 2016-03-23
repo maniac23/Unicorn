@@ -6,42 +6,6 @@ $(document).ready(function() {
 		return false;
 	});
 
-	// owl carousel
-	$('.owl-carousel').owlCarousel({
-    loop:true,
-    nav: false,
-    margin:60,
-    dots: true,
-    animateIn: true,
-    animateOut: true,
-    items: 3,
-    center: true,
-    autoWidth: true,
-    responsiveClass:true,
-    responsive:{
-        600:{
-            items:3,
-        
-        },
-        1000:{
-            items:3,
-     
-        }
-      }
-});
-$('.portfolio-carousel').owlCarousel({
-	  loop: true,
-    nav: false,
-    margin:0,
-    dots: true,
-    animateIn: true,
-    animateOut: true,
-    items: 3,
-    center: true,
-    autoWidth: false,
-  });
-
-
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
 	$(".forms").submit(function() {
@@ -63,7 +27,7 @@ $('.portfolio-carousel').owlCarousel({
 });
 
 // portfolio filter
-var itemsToFilter = document.querySelectorAll('.portfolio-carousel img');
+var itemsToFilter = document.querySelectorAll('.portfolio-slider img');
 var checkBoxes = document.querySelectorAll('.filters input');
 for (var i = 0; i<checkBoxes.length; i++) {
 	checkBoxes[i].addEventListener('click', filterItems, false);

@@ -11,11 +11,8 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/bootstrap-grid-3.3.2.min.css">
 	<link rel="stylesheet" href="css/fonts.min.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"></head>
-	<link rel="stylesheet" href="css/owl.carousel.css">
-
 <body>
 	<header class="main-header">
 		<div class="top-menu">
@@ -121,13 +118,11 @@
 			<input type="radio" id="btn-1" name="toggle" checked>
 			<input type="radio" id="btn-2" name="toggle">
 			<input type="radio" id="btn-3" name="toggle">
-			<input type="radio" id="btn-4" name="toggle">
 			
 			<div class="slider-controls">
 				<label for="btn-1"></label>
 				<label for="btn-2"></label>
 				<label for="btn-3"></label>
-				<label for="btn-4"></label>
 			</div>
 				<div class="slider-inner">
 				<div class="slider-slides">
@@ -163,19 +158,33 @@
 			  <input class="filter-check" type="checkbox" id="filter-paintings" value="paintings" hidden>
 				<label class="filter-item" for="filter-paintings">Paintings</label>
 			</form>
-			<div class=portfolio-carousel>
-				<img data-type="paintings"src="img/portfolio/temp-1.jpg" alt="">
-				<img data-type="illusion" src="img/portfolio/temp-2.jpg" alt="">
-				<img data-type="mystery" src="img/portfolio/temp-1.jpg" alt="">
-				<img data-type="art" src="img/portfolio/temp.jpg" alt="">
-				<img data-type="travel" src="img/portfolio/temp-2.jpg" alt="">
-				<img data-type="paintings" src="img/portfolio/temp-1.jpg" alt="">
+			<div class=portfolio-slider>
+			<input type="radio" id="portfolio-btn-1" name="portfolio-toggle" checked>
+			<input type="radio" id="portfolio-btn-2" name="portfolio-toggle">
+			<input type="radio" id="portfolio-btn-3" name="portfolio-toggle">
+			<input type="radio" id="portfolio-btn-4" name="portfolio-toggle">
+				<div class="portfolio-slider-controls">
+				<label for="portfolio-btn-1"></label>
+				<label for="portfolio-btn-2"></label>
+				<label for="portfolio-btn-3"></label>
+				<label for="portfolio-btn-4"></label>
+			</div>
+			<div class="portfolio-slider-inner">
+				<div class="portfolio-slider-slides">
+				<img data-type="paintings"src="img/portfolio/temp-1.jpg">
+				<img data-type="illusion" src="img/portfolio/temp-2.jpg">
+				<img data-type="mystery" src="img/portfolio/temp-1.jpg">
+				<img data-type="art" src="img/portfolio/temp.jpg">
+				<img data-type="travel" src="img/portfolio/temp-2.jpg">
+				<img data-type="paintings" src="img/portfolio/temp-1.jpg">
+				</div>
+			</div>
+
 			</div>
 		</section>
 	</main>
 
 	<script src="js/libs/jquery.min.js"></script>
-	<script src="js/libs/owl.carousel.min.js"></script>
 	<script src="js/common.js"></script>
 </body>
 </html>

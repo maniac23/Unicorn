@@ -343,14 +343,14 @@ p{
 	height: 367px;
 	text-align: center;
 	background-color: $clients-bg-color;
-	padding: 45px 165px 100px;
+	padding: 45px 60px 100px;
 	h2{
 		margin-bottom: 40px;
 	}
 }
 .slider{
  	min-width: 1180px;
- 	padding: 0 165px 0;
+ 	padding: 0;
  	position: relative;
  	input[type=radio] {
  		display: none;
@@ -372,14 +372,14 @@ p{
 .slider-controls{
 	position: absolute;
 	width: 100%;
-	left: -10%;
+	left: 0%;
 	bottom: -60px;
 	z-index: 100;
 	text-align: center;
 	label{
 		display: inline-block;
-		width: 10px;
-		height: 10px;
+		width: 15px;
+		height: 15px;
 		margin: 0 3px;
 		background-color: $alt-font-color;
 		border: 1px solid black;
@@ -388,7 +388,7 @@ p{
 		transition: background-color .2s;
 	}
 }
-@for $i from 1 through 4{
+@for $i from 1 through 3{
 	#btn-#{$i}:checked ~ .slider-controls label[for="btn-#{$i}"] {
 		background-color: $underline-color;
 	}
@@ -401,9 +401,6 @@ p{
 }
 #btn-3:checked ~ .slider-inner .slider-slides { 
     transform: translate(-800px);
-}
-#btn-4:checked ~ .slider-inner .slider-slides { 
-    transform: translate(-1200px);
 }
 // portfolio section styles
 .portfolio{
@@ -446,9 +443,62 @@ p{
 		}
 	}
 }
-.portfolio-carousel{
-		height: 700px;		
+.portfolio-slider{
+		min-width: 1180px;
+		position: relative;
+		input[type=radio] {
+ 		display: none;
+ 	}
+}		
+.portfolio-slider-inner{
+	overflow: hidden;
 }
+.portfolio-slider-slides{
+	width: 600%;
+	transition: transform .8s ease;
+	img{
+		float: left;
+		width: 400px;
+		height: 250px;
+	}
+}
+.portfolio-slider-controls{
+	position: absolute;
+	width: 100%;
+	left: 0%;
+	bottom: -60px;
+	z-index: 100;
+	text-align: center;
+	label{
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin: 0 3px;
+		background-color: $alt-font-color;
+		border: 1px solid black;
+		cursor: pointer;
+		border-radius: 50%;
+		transition: background-color .2s;
+	}
+}
+@for $i from 1 through 4{
+	#portfolio-btn-#{$i}:checked ~ .portfolio-slider-controls label[for="portfolio-btn-#{$i}"] {
+		background-color: $underline-color;
+	}
+}
+#portfolio-btn-1:checked ~ .portfolio-slider-inner .portfolio-slider-slides { 
+    transform: translate(0);
+}
+#portfolio-btn-2:checked ~ .portfolio-slider-inner .portfolio-slider-slides { 
+    transform: translate(-400px);
+}
+#portfolio-btn-3:checked ~ .portfolio-slider-inner .portfolio-slider-slides { 
+    transform: translate(-800px);
+}
+#portfolio-btn-4:checked ~ .portfolio-slider-inner .portfolio-slider-slides { 
+    transform: translate(-1200px);
+}
+
 
 .filter-check:checked + .filter-item {
 	background-color: $underline-color;
