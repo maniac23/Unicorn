@@ -348,29 +348,64 @@ p{
 		margin-bottom: 40px;
 	}
 }
-.owl-carousel{
-	margin-bottom: 40px;
+.slider{
+ 	min-width: 1180px;
+ 	padding: 0 165px 0;
+ 	position: relative;
+ 	input[type=radio] {
+ 		display: none;
+ 	}
 }
-
-.owl-dots {
-    width: 100%;
-    margin-top: 50px;
-    text-align: center;
-    .owl-dot{
-    	width: 14px;
-    	height: 14px;
-    	display: inline-block;
-    	margin: 0 4px;
-    	border-radius: 50%;
-    	border: 1px solid $main-font-color;
-    	background-color: #fff;
-    	opacity: .5;
-    	&.active{
-    		background-color: $underline-color;
-    	}
-    }
+.slider-inner{
+	overflow: hidden;
 }
-
+.slider-slides{
+	width: 600%;
+	transition: transform .8s ease;
+	img{
+		float: left;
+		width: 100px;
+		height: 100px;
+		margin-right: 60px;
+	}
+}
+.slider-controls{
+	position: absolute;
+	width: 100%;
+	left: -10%;
+	bottom: -60px;
+	z-index: 100;
+	text-align: center;
+	label{
+		display: inline-block;
+		width: 10px;
+		height: 10px;
+		margin: 0 3px;
+		background-color: $alt-font-color;
+		border: 1px solid black;
+		cursor: pointer;
+		border-radius: 50%;
+		transition: background-color .2s;
+	}
+}
+@for $i from 1 through 4{
+	#btn-#{$i}:checked ~ .slider-controls label[for="btn-#{$i}"] {
+		background-color: $underline-color;
+	}
+}
+#btn-1:checked ~ .slider-inner .slider-slides { 
+    transform: translate(0);
+}
+#btn-2:checked ~ .slider-inner .slider-slides { 
+    transform: translate(-400px);
+}
+#btn-3:checked ~ .slider-inner .slider-slides { 
+    transform: translate(-800px);
+}
+#btn-4:checked ~ .slider-inner .slider-slides { 
+    transform: translate(-1200px);
+}
+// portfolio section styles
 .portfolio{
 	min-width: 915px;
 	text-align: center;
