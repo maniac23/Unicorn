@@ -65,6 +65,21 @@
   #portfolio-btn-4:checked ~ .portfolio-slider-inner .portfolio-slider-slides { 
   	transform: translate(-1400px);
   }
+  .team{
+  	padding: 50px 100px 54px;
+  	>p{
+  		padding: 0;
+  	}
+  	.container-fluid{
+			.row{
+				.col-md-3{
+					img{
+						margin-bottom: 20px;
+					}
+				}
+			}
+		}
+  }
 }
 
 /* Small Devices, Tablets */
@@ -197,6 +212,9 @@
 	.quote{
 		padding: 74px 20px 68px;
 	}
+	.team{
+  	padding: 50px 20px 54px;
+  }
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px){
