@@ -39,9 +39,7 @@
 		padding-left: 60px;
 		padding-right: 60px;
 	}
-	.slider-controls{
-		left: -15%;
-	}
+
 	#btn-1:checked ~ .slider-inner .slider-slides { 
     transform: translate(0);
   }
@@ -51,11 +49,9 @@
   #btn-3:checked ~ .slider-inner .slider-slides { 
     transform: translate(-1000px);
   }
-
-  .portfolio-slider-controls{
-  	left: -7%;
+  .portfolio{
+  	padding-right: 200px;
   }
-
   #portfolio-btn-2:checked ~ .portfolio-slider-inner .portfolio-slider-slides { 
   	transform: translate(-600px);
   }
@@ -80,6 +76,7 @@
 			}
 		}
   }
+
 }
 
 /* Small Devices, Tablets */
@@ -142,9 +139,6 @@
 		}
 	}
 
-	.slider-controls{
-		left: -21%;
-	}
 	#btn-1:checked ~ .slider-inner .slider-slides { 
     transform: translate(0);
   }
@@ -200,10 +194,6 @@
 		padding: 45px 0px 100px;
 	}
 
-	.slider-controls{
-		left: -34%;
-	}
-
 	.slider-slides{
 		img{
 			margin-right: 20px;
@@ -214,6 +204,9 @@
 	}
 	.team{
   	padding: 50px 20px 54px;
+  }
+  .facts{
+  	padding: 103px 20px 140px;
   }
 }
 /* Custom, iPhone Retina */

@@ -313,7 +313,8 @@ p{
 				height: 7px;
 				background-color: $underline-color;
 				top: 0;
-				left: 35%;
+				left: 50%;
+				transform: translate(-50%);
 				opacity: 0;
 				transition: all 0.5s ease-in;
 			}
@@ -372,7 +373,8 @@ p{
 .slider-controls{
 	position: absolute;
 	width: 100%;
-	left: 0%;
+	left: 50%;
+	transform: translateX(-50%);
 	bottom: -60px;
 	z-index: 100;
 	text-align: center;
@@ -406,9 +408,8 @@ p{
 .portfolio{
 	min-width: 915px;
 	text-align: center;
-	padding: 100px 0 155px 0;
+	padding: 100px 165px 155px;
 	p{
-		padding: 0 165px 0;
 		position: relative;
 		&:after{
 			content: "";
@@ -416,7 +417,8 @@ p{
 			width: 75px;
 			height: 7px;
 			top: 190%;
-			left: 47%;
+			left: 50%;
+			transform: translateX(-50%);
 			background-color: $underline-color;
 		}
 	}
@@ -444,7 +446,8 @@ p{
 	}
 }
 .portfolio-slider{
-		max-width: 1370px;
+		max-width: 1414px;
+		margin: 0 -165px;
 		position: relative;
 		input[type=radio] {
  		display: none;
@@ -465,7 +468,8 @@ p{
 .portfolio-slider-controls{
 	position: absolute;
 	width: 100%;
-	left: 0%;
+	left: 50%;
+	transform: translateX(-50%);
 	bottom: -60px;
 	z-index: 100;
 	text-align: center;
@@ -573,8 +577,84 @@ p{
 				}
 			}
 		}
-
 	}
+	.facts{
+		min-height: 688px;
+		background: url('../img/facts_bg.jpg') no-repeat 0 center;
+		background-size: cover;
+		position: relative;
+		text-align: center;
+		padding: 103px 165px 140px;
+		color: $alt-font-color;
+		.facts-overlay{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(33, 33, 33, 0.71);
+		}
+		.facts-content{
+			position: relative;
+			h2{
+				text-transform: capitalize;
+				margin-bottom: 66px;
+			}
+			.facts-numbers{
+				background-color:rgba(255, 255, 255, 0.34);
+				max-width: 830px;
+				min-height: 353px;
+				margin: auto;
+				padding: 59px 87px;
+				box-sizing: content-box;
+				position: relative;
+				&:after{
+					content: "";
+					position: absolute;
+					width: 75px;
+					height: 7px;
+					background-color: $underline-color;
+					bottom: -7px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+				.container-fluid{
+					padding: 0;
+					.row{
+						.col-md-6{
+							padding: 0;
+							.facts-numbers-number{
+								position: relative;
+								font-size: 1.688rem;
+								font-weight: 700;
+								letter-spacing: 0.127rem;
+								line-height: 1.259;
+								margin-bottom: 40px;
+								&:after{
+									content: "";
+									position: absolute;
+									width: 75px;
+									height: 4px;
+									background-color: $underline-secondary-color;
+									top: 120%;
+									left: 50%;
+									transform: translateX(-50%);
+								}
+							}
+							.facts-numbers-text{
+								font-size: 1.5rem;
+								font-weight: 400;
+								letter-spacing: 0.112rem;
+								line-height: 1.417;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	
 
 
 @import "media.scss";
