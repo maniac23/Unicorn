@@ -349,7 +349,7 @@ p{
 	}
 }
 .slider{
- 	min-width: 1180px;
+ 	max-width: 1180px;
  	padding: 0;
  	position: relative;
  	input[type=radio] {
@@ -444,7 +444,7 @@ p{
 	}
 }
 .portfolio-slider{
-		min-width: 1180px;
+		max-width: 1180px;
 		position: relative;
 		input[type=radio] {
  		display: none;
@@ -510,5 +510,32 @@ p{
 .hideItem{
 	display: none !important;
 }
+
+/// quote sction styles
+.quote{
+	background-color: $main-font-color;
+	color: $alt-font-color;
+	text-align: center;
+	padding: 74px 165px 68px;
+	i{
+		font-size: 1.125rem;
+		font-weight: 400;
+		line-height: 2.111
+	}
+	.quote-text{
+		font-size: 1.25rem;
+		font-weight: 400;
+		line-height: 1.9;
+	}
+	.qoute-author{
+		font-size: 1.25rem;
+		font-weight: 400;
+		line-height: 1.9;
+		font-style: italic;
+		margin-bottom: 0;
+	}
+}
+
+
 
 @import "media.scss";

@@ -80,7 +80,6 @@ gulp.task('webserver', function () {
 gulp.task('html', function(){
 	gulp.src(path.src.html)
 	.pipe(gulp.dest(path.build.html))
-	.pipe(notify("Done My Bosssss!"))
 	.pipe(reload({stream: true}));
 	
 });
