@@ -159,6 +159,11 @@
   	padding: 107px 100px 94px;
   }
 
+  footer{
+  	.footer-menu-right{
+  		float: none;
+  		}
+  	}
 }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px){
@@ -218,6 +223,28 @@
   	padding: 107px 20px 94px;
   	.blog-text{
   		padding: 50px 0px 30px;
+  	}
+  }
+  .twitter{
+  	padding: 73px 20px 97px;
+  }
+  footer{
+  	padding: 73px 20px 43px;
+  	form{
+  		.email{
+  			width: 100%;
+  		}
+  		.subject{
+  			width: 100%;
+  		}
+  		.message{
+  			margin-bottom: 30px;
+  		}
+  	}
+  	.footer-menu-right{
+  		li{
+  			margin-right: 15px;
+  		}
   	}
   }
 }

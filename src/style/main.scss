@@ -555,7 +555,7 @@ p{
 			.row{
 				.col-md-3{
 					margin-bottom: 30px;
-					img{
+					object{
 						margin-bottom: 50px;
 						width: 102px;
 						height: 108px;
@@ -724,6 +724,125 @@ p{
 		line-height: 2.375;
 	}
 }	
+footer{
+	background-color: $main-font-color;
+	padding: 73px 165px 43px;
+	color: $alt-font-color;
+	.container-fluid{
+		border-bottom: 1px solid $footer-font-color;
+	}
+	h2{
+		text-transform: uppercase;
+		font-size: 1.375rem;
+		font-weight: 700;
+		line-height: 1.727;
+		text-align: left;
+		margin: 0;
+	}
+	p{
+		color: $footer-font-color;
+		font-size: 0.875rem;
+		font-weight: 400;
+		line-height: 1.714;
+		text-align: left;
+	}
+	form{
+		input{
+			background-color: $main-font-color;
+			color: $footer-font-color;
+			border: none;
+			border-bottom: 1px solid $footer-font-color;
+		}
+		input[placeholder]{
+			font-size: 0.875rem;
+			font-weight: 400;
+			line-height: 1.714;
+			text-align: left;
+			text-transform: uppercase;
+		}
+		.email{
+			margin-right: 30px;
+			width: 45%;
+			margin-bottom: 10px;
 
+		}
+		.subject{
+			width: 46%;
+			margin-bottom: 10px;
+		}
+		.message{
+			display: block;
+			width: 100%;
+			margin-bottom: 90px;
+		}
+		button{
+			background: none;
+			border: none;
+			text-transform: uppercase;
+			font-size: 0.875rem;
+			font-weight: 400;
+			line-height: 1.714;
+			text-align: left;
+			color: $footer-font-color;
+			margin-bottom: 16px;
+			i{
+				margin-left: 7px;
+			}
+		}
+	}
+	.links{
+		color: $footer-header-color;
+		font-size: 0.938rem;
+		font-weight: 600;
+		line-height: 1.6;
+		text-align: left;
+		padding-left: 55px;
+		text-transform: uppercase;
+		ul{
+			padding: 0;
+			li{
+				list-style-type: none;
+				font-size: 0.875rem;
+				font-weight: 400;
+				line-height: 1.714;
+				text-align: left;
+				color: $footer-font-color;
+				text-transform: capitalize;
+				a{
+					text-decoration: none;
+					color: $footer-font-color;
+					transition: all 0.3s ease-in;
+					&:hover{
+						color: $footer-header-color;
+					}
+				}
+			}
+		}
+	}
+	.footer-menu-left{
+		display: inline-block;
+
+		a{
+			text-decoration: none;
+			color: $footer-font-color;
+		}
+	}
+	.footer-menu-right{
+		float: right;
+		li{
+			display: inline-block;
+			font-size: 0.813rem;
+			font-weight: 400;
+			line-height: 1.846;
+			text-align: right;
+			text-transform: uppercase;
+			color: $footer-font-color;
+			margin-right: 30px;
+			&:last-child{
+				margin-right: 0;
+			}
+		}
+	}
+}
 
 @import "media.scss";
